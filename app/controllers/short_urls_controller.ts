@@ -10,15 +10,17 @@ export default class ShortUrlsController {
   }
 
   public async create({ request, view, response }) {
+    // const originalUrl = request.input('url')
+
+    // const code = nanoid(6)
+    // urlMap.set(code, originalUrl)
+
+    // return view.render('pages/result', {
+    //   shortUrl: `${request.protocol()}://${request.host()}/${code}`,
+    //   code,
+    // })
+
     const originalUrl = request.input('url')
-
-    const code = nanoid(6)
-    urlMap.set(code, originalUrl)
-
-    return view.render('pages/result', {
-      shortUrl: `${request.protocol()}://${request.host()}/${code}`,
-      code,
-    })
   }
 
   public async redirect({ params, response }) {
@@ -26,3 +28,4 @@ export default class ShortUrlsController {
     return response.redirect(original)
   }
 }
+
