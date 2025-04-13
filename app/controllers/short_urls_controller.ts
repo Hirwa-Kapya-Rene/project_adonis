@@ -20,16 +20,19 @@ export default class ShortUrlsController {
     //   code,
     // })
 
+    const originalUrl = request.input('url')
+    console.log(originalUrl);
+    
     
     
     
     
   }
 
-//   public async redirect({ params, response }) {
-//     const original = urlMap.get(params.code)
-//     return response.redirect(original)
-//   }
-// }
+  public async redirect({ params, response }) {
+    // const original = urlMap.get(params.code)
+    // return response.redirect(original)
+  }
+}
 
 
