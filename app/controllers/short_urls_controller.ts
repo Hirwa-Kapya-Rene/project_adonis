@@ -1,8 +1,8 @@
 // import type { HttpContext } from '@adonisjs/core/http'
 
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 
-export const urlMap = new Map<string, string>()
+// export const urlMap = new Map<string, string>()
 
 export default class ShortUrlsController {
   public async index({ view }) {
@@ -20,12 +20,16 @@ export default class ShortUrlsController {
     //   code,
     // })
 
-    const originalUrl = request.input('url')
+    
+    
+    
+    
   }
 
-  public async redirect({ params, response }) {
-    const original = urlMap.get(params.code)
-    return response.redirect(original)
-  }
-}
+//   public async redirect({ params, response }) {
+//     const original = urlMap.get(params.code)
+//     return response.redirect(original)
+//   }
+// }
+
 
