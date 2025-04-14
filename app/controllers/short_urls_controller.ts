@@ -26,7 +26,11 @@ export default class ShortUrlsController {
     const shortCode = Math.floor(Math.random() * 6000)
     console.log(shortCode);
 
-    const shortlink = "http://localhost:3333/" + shortCode
+    const link = request.completeUrl(true)
+    console.log(link);
+    
+
+    const shortlink = link + shortCode
     console.log(shortlink);
     
 
