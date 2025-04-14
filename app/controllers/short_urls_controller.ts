@@ -38,8 +38,6 @@ export default class ShortUrlsController {
     console.log(codeqr);
 
     return view.render('pages/result', {url: shortlink, qrcode: codeqr})
-
-    
     
   }
 
