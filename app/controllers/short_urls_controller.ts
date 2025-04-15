@@ -6,7 +6,7 @@
 import QRCode from 'qrcode'
 export default class ShortUrlsController {
   public async index({ view }) {
-    return view.render('pages/home')
+    return view.render('pages/hero')
   }
 
   public async create({ request, view, response }) {

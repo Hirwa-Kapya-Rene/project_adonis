@@ -82,24 +82,17 @@
         </p>  --}}
       </div>
 
-      {{--  <form action="/shorten" method="POST" class="border border-sand-8 rounded-md p-2 w-1/2 h-1/2 mx-auto mt-10 flex">
+      <form action="/shorten" method="POST" class="border border-sand-8 rounded-md p-2 w-1/2 h-1/2 mx-auto mt-10 flex">
         {{ csrfField() }}
         <div class="container mx-auto mt-4">
-          <h2 class="text-2xl font-bold text-sand-11 mb-2">
-            Your URL 
-          </h2>
-        <div class=" flex  gap-4 container mx-auto mb-4 ">
-          <div class="">
             <input
             class="border border-sand-6 rounded-md p-2 "
               type="text"
               name="url"
               id="url"
             />
-          </div>
-          @!component('components/button', { text: 'Shorten' })
-        </div>
-      </form>  --}}
+          @!component('components/button', { text: 'Create' })
+      </form>
     </main>
     @!component('components/footer')
   </body>
