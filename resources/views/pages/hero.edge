@@ -70,8 +70,22 @@
     @stack('dumper')
   </head>
   <body class="min-h-screen w-screen font-sans flex flex-col">
-    @!component('components/header')
-    <main class="flex-1">
+    @component('components/header')
+
+    
+    <form action="/shorten" method="GET">
+      {{ csrfField() }}
+      @!component('components/button', {
+        text: 'create',
+        color: 'bg-blue-600 hover:bg-blue-700',
+        type: 'submit'
+      })
+    </form>
+    @end
+
+   
+  
+        <main class="flex-1">
       <div class="container mx-auto mt-4">
         <h1 class="text-4xl font-bold text-primary">
           All your shorten Urls
@@ -80,19 +94,16 @@
         {{--  <p class="text-lg text-sand-11">
           Ici sera le formulaire de saisie de l'url
         </p>  --}}
+         <form action="/shorten" method="POST">
+      {{ csrfField() }}
+      @!component('components/button', {
+        text: 'create',
+        color: 'bg-blue-600 hover:bg-blue-700',
+        type: 'submit',
+      })
+    </form>
       </div>
-
-      <form action="/shorten" method="POST" class="border border-sand-8 rounded-md p-2 w-1/2 h-1/2 mx-auto mt-10 flex">
-        {{ csrfField() }}
-        <div class="container mx-auto mt-4">
-            <input
-            class="border border-sand-6 rounded-md p-2 "
-              type="text"
-              name="url"
-              id="url"
-            />
-          @!component('components/button', { text: 'Create' })
-      </form>
+      
     </main>
     @!component('components/footer')
   </body>
