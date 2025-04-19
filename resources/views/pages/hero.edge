@@ -81,13 +81,13 @@
           Ici sera le formulaire de saisie de l'url
         </p>
          <form action="/shorten" method="POST">
-      {{ csrfField() }}
-      @!component('components/button', {
-        text: 'create',
-        color: 'bg-blue-600 hover:bg-blue-700',
-        type: 'submit',
-      })
-    </form>
+          {{ csrfField() }}
+          @!component('components/button', {
+            text: 'create',
+            color: 'bg-blue-600 hover:bg-blue-700',
+            type: 'submit',
+          })
+          </form>
       </div>
       
     </main>
