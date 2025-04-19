@@ -4,10 +4,13 @@
 
 // export const urlMap = new Map<string, string>()
 import QRCode from 'qrcode'
+
 export default class ShortUrlsController {
   public async index({ view }) {
     return view.render('pages/hero')
   }
+
+
 
   public async create({ request, view, response }) {
     // const originalUrl = request.input('url')
@@ -45,6 +48,13 @@ export default class ShortUrlsController {
   //   // const original = urlMap.get(params.code)
   //   // return response.redirect(original)
   // }
+
+
+  public  async submit({view}) {
+
+    return view.render(`pages/home`)
+    
+  }
 }
 
 

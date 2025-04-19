@@ -90,14 +90,9 @@
           </h2>
         <div class=" flex  gap-4 container mx-auto mb-4 ">
           <div class="">
-            <input
-            class="border border-sand-6 rounded-md p-2 "
-              type="text"
-              name="url"
-              id="url"
-            />
+            <input type="url" name="url" id="url"  class="border border-sand-6 rounded-md p-2 " required>
           </div>
-          @!component('components/button', { text: 'Shorten' })
+          @!component('components/button', {type: 'submit'},{ text: 'Shorten' })
         </div>
       </form>
     </main>

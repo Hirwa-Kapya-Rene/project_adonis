@@ -80,14 +80,7 @@
         <p class="text-lg text-sand-11">
           Instantly edit and delete your urls
         </p>
-         <form action="/shorten" method="POST">
-          {{ csrfField() }}
-          @!component('components/button', {
-            text: 'create',
-            color: 'bg-blue-600 hover:bg-blue-700',
-            type: 'submit',
-          })
-          </form>
+        <a href="/home">create short url</a>
       </div>
       
     </main>
