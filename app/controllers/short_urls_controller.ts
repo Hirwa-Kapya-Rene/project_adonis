@@ -27,15 +27,15 @@ export default class ShortUrlsController {
     console.log(shortCode);
 
     const link = request.completeUrl(true)
-    console.log(link);
+    // console.log(link);
     
 
     const shortlink = link + shortCode
-    console.log(shortlink);
+    // console.log(shortlink);
     
 
     const codeqr = await QRCode.toDataURL(shortlink)
-    console.log(codeqr);
+    // console.log(codeqr);
 
     return view.render('pages/result', {url: shortlink, qrcode: codeqr})
     
