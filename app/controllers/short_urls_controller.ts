@@ -29,7 +29,7 @@ export default class ShortUrlsController {
       short_url: link,
       original_url: originalUrl
     })
-    console.log(url);
+    // console.log(url);
     
 
     const shortlink = link + shortCode
