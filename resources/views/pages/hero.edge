@@ -72,17 +72,22 @@
   <body class="min-h-screen w-screen font-sans flex flex-col ">
     @!component('components/header')
       <main class="flex-1">
-      <div class="container mx-auto mt-4">
+      <div class="container mx-auto mt-4 sticky top-0 ">
         <h1 class="text-4xl font-bold text-primary">
           All your shorten Urls
         </h1>
 
-        <p class="text-lg text-sand-11">
+        <p class="text-lg text-sand-11 mb-5">
           Instantly edit and delete your urls
         </p>
-        <a href="/home">create short url</a>
+        <a href="/home" class="border rounded-md p-2 font-bold text-white bg-primary">
+          create short url
+        </a>
       </div>
-      
+
+      <section>
+        
+      </section>
     </main>
     @!component('components/footer')
   </body>

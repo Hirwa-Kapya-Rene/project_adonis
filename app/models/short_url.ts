@@ -6,7 +6,7 @@ export default class ShortUrl extends BaseModel {
   declare id: number
 
   @column()
-  declare code: string
+  declare code: number
 
   @column()
   declare short_url: string

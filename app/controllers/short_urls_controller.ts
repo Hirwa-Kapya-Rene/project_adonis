@@ -4,6 +4,7 @@
 
 // export const urlMap = new Map<string, string>()
 import QRCode from 'qrcode'
+import ShortUrl from '#models/short_url'
 
 export default class ShortUrlsController {
   public async index({ view }) {
@@ -13,15 +14,6 @@ export default class ShortUrlsController {
 
 
   public async create({ request, view, response }) {
-    // const originalUrl = request.input('url')
-
-    // const code = nanoid(6)
-    // urlMap.set(code, originalUrl)
-
-    // return view.render('pages/result', {
-    //   shortUrl: `${request.protocol()}://${request.host()}/${code}`,
-    //   code,
-    // })
 
     const originalUrl = request.input('url')
     console.log(originalUrl);
@@ -31,6 +23,13 @@ export default class ShortUrlsController {
 
     const link = request.completeUrl(true)
     // console.log(link);
+    
+    const url = await ShortUrl.create({
+      code: shortCode,
+      short_url: link,
+      original_url: originalUrl
+    })
+    console.log(url);
     
 
     const shortlink = link + shortCode
