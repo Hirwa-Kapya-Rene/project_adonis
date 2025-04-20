@@ -86,7 +86,11 @@
       </div>
 
       <section>
-        
+        @each(list in lists)
+          <p>{{list.code}}</p>
+          <p>{{list.short_url}}</p>
+          <p>{{list.original_url}}</p>
+        @end
       </section>
     </main>
     @!component('components/footer')

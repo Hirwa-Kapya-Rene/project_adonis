@@ -8,11 +8,17 @@ import ShortUrl from '#models/short_url'
 
 export default class ShortUrlsController {
   public async index({ view }) {
-    return view.render('pages/hero')
+    
+    const lists = await ShortUrl.all()
+    return view.render('pages/hero', {lists})
   }
 
 
+public async listurls({ view }) {
+  const lists = await ShortUrl.all()
 
+  return view.render('pages/hero', {lists})
+}
   public async create({ request, view, response }) {
 
     const originalUrl = request.input('url')
