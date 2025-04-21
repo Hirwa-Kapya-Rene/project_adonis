@@ -1,8 +1,5 @@
 // import type { HttpContext } from '@adonisjs/core/http'
 
-// import { nanoid } from 'nanoid'
-
-// export const urlMap = new Map<string, string>()
 import QRCode from 'qrcode'
 import ShortUrl from '#models/short_url'
 
