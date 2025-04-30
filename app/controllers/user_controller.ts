@@ -6,7 +6,7 @@ import User from '#models/user'
 export default class UserController {
 
   public async store({ view, request, response}:HttpContext) {
-      const payload = await request.validateUsing(createUserValidator)
+      const payload = await request.input('url')
       
       const user = await User.create({
         full_name: payload.full_name,
