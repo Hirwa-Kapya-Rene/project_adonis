@@ -17,7 +17,7 @@ public async listurls({ view }) {
   return view.render('pages/hero', {lists})
 }
   public async create({ request, view, response }) {
-
+ 
     const originalUrl = request.input('url')
     console.log(originalUrl);
 
