@@ -13,6 +13,8 @@ export default class ShortUrlsController {
 
 public async listurls({ view }) {
   const lists = await ShortUrl.all()
+  console.log(lists);
+  
 
   return view.render('pages/hero', {lists})
 }
