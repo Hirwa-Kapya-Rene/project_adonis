@@ -40,7 +40,7 @@ public async listurls({ view }) {
     
 
     const codeqr = await QRCode.toDataURL(shortlink)
-    // console.log(codeqr);
+    console.log(codeqr);
 
     return view.render('pages/result', {url: shortlink, qrcode: codeqr})
     
