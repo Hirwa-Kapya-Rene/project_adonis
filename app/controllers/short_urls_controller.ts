@@ -25,7 +25,7 @@ public async listurls({ view }) {
     console.log(shortCode);
 
     const link = request.completeUrl(true)
-    // console.log(link);
+    console.log(link);
     
     const url = await ShortUrl.create({
       code: shortCode,
